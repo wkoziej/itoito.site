@@ -2,6 +2,9 @@ module.exports = function(eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
   
+  // Copy CNAME file for GitHub Pages
+  eleventyConfig.addPassthroughCopy("src/CNAME");
+  
   // Dodanie filtra date
   eleventyConfig.addFilter("year", function() {
     return new Date().getFullYear();
