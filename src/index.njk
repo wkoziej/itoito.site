@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+title: Strona główna
+---
+
+<section class="hero text-center py-5">
+  <div class="container">
+    <h1 class="display-4">{{ site.name }}</h1>
+    <p class="lead">{{ site.description }}</p>
+    <div class="mt-4">
+      <a href="/uslugi/" class="btn btn-primary my-2">Nasze usługi</a>
+      <a href="/kontakt/" class="btn btn-secondary my-2">Kontakt</a>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Masaż</h5>
+            <p class="card-text">Profesjonalne masaże relaksacyjne i lecznicze.</p>
+            <a href="/uslugi/#masaz" class="btn btn-sm btn-outline-primary">Dowiedz się więcej</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Muzyka</h5>
+            <p class="card-text">Usługi muzyczne, kompozycje i oprawa wydarzeń.</p>
+            <a href="/uslugi/#muzyka" class="btn btn-sm btn-outline-primary">Dowiedz się więcej</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Programowanie</h5>
+            <p class="card-text">Tworzenie stron internetowych i aplikacji.</p>
+            <a href="/uslugi/#programowanie" class="btn btn-sm btn-outline-primary">Dowiedz się więcej</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
