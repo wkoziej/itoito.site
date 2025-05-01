@@ -166,7 +166,7 @@ itoito.website/
          "url": "/o-firmie/"
        },
        {
-         "text": "Usługi",
+         "text": "Czym się dzielimy",
          "url": "/uslugi/"
        },
        {
@@ -232,7 +232,7 @@ itoito.website/
          <h1 class="fw-light">{{ site.name }}</h1>
          <p class="lead text-muted">{{ site.description }}</p>
          <p>
-           <a href="/uslugi/" class="btn btn-primary my-2">Nasze usługi</a>
+           <a href="/uslugi/" class="btn btn-primary my-2">Usługi</a>
            <a href="/kontakt/" class="btn btn-secondary my-2">Kontakt</a>
          </p>
        </div>

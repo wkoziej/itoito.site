@@ -15,10 +15,13 @@ body {
 
 .hero {
   position: relative;
-  padding: 3rem 0;
+  padding: 5rem 0;
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  margin: 0 15px;
 }
 
 .hero::before {
@@ -35,12 +38,15 @@ body {
   z-index: -1;
 }
 
-.hero .container {
+.hero .container-fluid {
   position: relative;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
-  border-radius: 0.5rem;
+  /* Usunięto style dla dodatkowego tła */
+}
+
+.hero h1, .hero p, .hero .btn {
+  position: relative;
+  z-index: 3;
 }
 
 .service-card {
