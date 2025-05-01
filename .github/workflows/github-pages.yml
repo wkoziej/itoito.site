@@ -4,6 +4,12 @@ on:
   push:
     branches: [ main ]
 
+# Dodanie uprawnień dla GITHUB_TOKEN
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -21,6 +27,9 @@ jobs:
         
       - name: Build site
         run: npm run build
+        
+      - name: Copy CNAME file
+        run: cp CNAME dist/ || echo "CNAME file not found"
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
