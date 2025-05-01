@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,54 @@
     
     <!-- Custom styles -->
     <link href="/assets/css/main.css" rel="stylesheet">
+    
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .site-background {
+            background-image: url('/assets/images/profeska-tajski.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        main {
+            flex: 1 0 auto;
+        }
+        
+        main .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 0.375rem;
+            padding: 2rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+        
+        footer {
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 768px) {
+            main .container {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="d-flex flex-column h-100">
+    <div class="site-background"></div>
+    
     <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -44,45 +90,47 @@
   </nav>
 </header> 
     
-    <main class="container py-5">
-        
+    <main class="py-5 flex-shrink-0">
+        <div class="container">
+            
 <div class="container">
   <h1 class="mb-4">Nasze usługi</h1>
   
   <div class="row mb-5" id="masaz">
     <div class="col-lg-6">
       <h2>Masaż</h2>
-      <p>Zajmuję się współczesnym masażem tajskim, osteothai oraz terapią punktów marma.</p>
-      
-      <h4 class="mt-4">Współczesny masaż tajski / Osteothai</h4>
-      <p>Masaż tajski jest pracą ze strukturami ciała (mięśnie, ścięgna, powięź, stawy). Mobilizuje je, odżywia, sprawia, że są bardziej elastyczne. Na poziomie niematerialnym daje przestrzeń do bycia tu i teraz i czerpania z tego.</p>
-      <ul>
-        <li>Na sesjach doświadczysz dedykowanego dla Ciebie połączenia tradycyjnego masażu tajskiego oraz masażu dynamicznego</li>
-        <li>Masaż daje to wszystko co jogiczne asany (ale zabiera Ci mniej energii) oraz uważny dotyk/akupresurę</li>
-        <li>Masaż dynamiczny pozwala ciału odczuć zalety wibracji, fal i ruchu</li>
-      </ul>
-      
-      <h4 class="mt-4">Terapia punktów Marma</h4>
-      <p>Marma terapia to technika masażu pochodząca z tradycyjnej indyjskiej medycyny Ayurveda. Skupia się na pracy z określonymi punktami w ciele, które są połączeniem ciała, umysłu i duszy.</p>
-      <ul>
-        <li>Stymulacja punktów Marma wpływa na przepływ energii życiowej (prany) i może oddziaływać na powiązane organy i systemy</li>
-        <li>Masaż punktów Marma może być stosowany do pomocy przy różnych dolegliwościach fizycznych i psychicznych</li>
-        <li>Sesja masażu jest połączona z olejowaniem ciała dedykowanymi ziołowymi olejami</li>
-      </ul>
-      
-      <h4 class="mt-4">Przygotowanie do masażu</h4>
-      <ul>
-        <li>Załóż wygodny strój, który nie ogranicza ruchu (dresy, piżamy, leginsy)</li>
-        <li>Zdejmij zegarki, biżuterię i inne przedmioty, które mogą utrudniać masaż</li>
-        <li>Powstrzymaj się od obfitego jedzenia i picia na kilka godzin przed sesją</li>
-      </ul>
-      
+      <div class="mb-4">
+        <img src="/assets/images/masaż.jpg" alt="Masaż tajski i terapia punktów Marma" class="img-fluid rounded shadow-sm">
+      </div>
+      <p>Oferuję sesj współczesnego masażu tajskiego z elementami osteothai oraz sesje terapii punktów marma.</p>
       <a href="/kontakt/" class="btn btn-primary">Umów się na masaż</a>
     </div>
     <div class="col-lg-6">
       <div class="card h-100">
-        <div class="card-body text-center">
-          <h5 class="card-title">Korzyści z masażu</h5>
+        <div class="card-body">
+          <h4 class="card-title mb-3">Współczesny masaż tajski / Osteothai</h4>
+          <p>Masaż tajski jest pracą ze strukturami ciała (mięśnie, ścięgna, powięź, stawy). Mobilizuje je, odżywia, sprawia, że są bardziej elastyczne. Na poziomie niematerialnym daje przestrzeń do bycia tu i teraz i czerpania z tego.</p>
+          <ul>
+            <li>Na sesjach doświadczysz dedykowanego dla Ciebie połączenia tradycyjnego masażu tajskiego oraz masażu dynamicznego</li>
+            <li>Masaż daje to wszystko co jogiczne asany (ale zabiera Ci mniej energii) oraz uważny dotyk/akupresurę</li>
+            <li>Masaż dynamiczny pozwala ciału odczuć zalety wibracji, fal i ruchu</li>
+          </ul>
+          
+          <h4 class="card-title mt-4 mb-3">Terapia punktów Marma</h4>
+          <p>Marma terapia to technika masażu pochodząca z tradycyjnej indyjskiej medycyny Ayurveda. Skupia się na pracy z określonymi punktami w ciele, które są połączeniem ciała, umysłu i duszy.</p>
+          <ul>
+            <li>Stymulacja punktów Marma wpływa na przepływ energii życiowej (prany) i może oddziaływać na powiązane organy i systemy</li>
+            <li>Masaż punktów Marma może być stosowany do pomocy przy różnych dolegliwościach fizycznych i psychicznych</li>
+            <li>Sesja masażu jest połączona z olejowaniem ciała dedykowanymi ziołowymi olejami</li>
+          </ul>
+          
+          <h4 class="card-title mt-4 mb-3">Przygotowanie do masażu</h4>
+          <ul>
+            <li>Zdejmij zegarki, biżuterię i inne przedmioty, które mogą utrudniać masaż</li>
+            <li>Powstrzymaj się od obfitego jedzenia i picia na kilka godzin przed sesją</li>
+          </ul>
+          
+          <h5 class="card-title mt-4">Korzyści z masażu</h5>
           <p class="card-text">Regularny masaż pomaga zmniejszyć napięcie mięśniowe, poprawia krążenie krwi, redukuje stres i wspiera ogólne dobre samopoczucie. Techniki tajskie i ajurwedyjskie dodatkowo harmonizują przepływ energii w ciele, wspierając zarówno fizyczny jak i psychiczny aspekt zdrowia.</p>
           
           <div class="alert alert-info mt-3">
@@ -96,19 +144,24 @@
   <div class="row mb-5" id="muzyka">
     <div class="col-lg-6">
       <h2>Muzyka</h2>
+      <div class="mb-4">
+        <img src="/assets/images/muzyka.jpg" alt="Usługi muzyczne" class="img-fluid rounded shadow-sm">
+      </div>
       <p>Tworzymy oprawę muzyczną na różne okazje oraz oferujemy usługi związane z kompozycją i produkcją muzyczną.</p>
-      <ul>
-        <li>Oprawa muzyczna wydarzeń</li>
-        <li>Kompozycje na zamówienie</li>
-        <li>Produkcja muzyczna</li>
-        <li>Lekcje gry na instrumentach</li>
-      </ul>
       <a href="/kontakt/" class="btn btn-primary">Zapytaj o usługi muzyczne</a>
     </div>
     <div class="col-lg-6">
       <div class="card h-100">
-        <div class="card-body text-center">
-          <h5 class="card-title">Dlaczego my?</h5>
+        <div class="card-body">
+          <h5 class="card-title">Nasze usługi muzyczne</h5>
+          <ul class="mb-4">
+            <li>Oprawa muzyczna wydarzeń</li>
+            <li>Kompozycje na zamówienie</li>
+            <li>Produkcja muzyczna</li>
+            <li>Lekcje gry na instrumentach</li>
+          </ul>
+          
+          <h5 class="card-title mt-4">Dlaczego my?</h5>
           <p class="card-text">Nasze doświadczenie muzyczne pozwala nam dostosować się do różnych stylów i potrzeb, tworząc unikalne kompozycje dla każdego klienta.</p>
         </div>
       </div>
@@ -118,25 +171,31 @@
   <div class="row mb-5" id="programowanie">
     <div class="col-lg-6">
       <h2>Programowanie</h2>
+      <div class="mb-4">
+        <img src="/assets/images/programowanie.jpg" alt="Usługi programistyczne" class="img-fluid rounded shadow-sm">
+      </div>
       <p>Oferujemy usługi programistyczne, specjalizując się w tworzeniu stron internetowych i aplikacji.</p>
-      <ul>
-        <li>Tworzenie stron internetowych</li>
-        <li>Aplikacje webowe</li>
-        <li>Systemy CMS</li>
-        <li>Konsultacje techniczne</li>
-      </ul>
       <a href="/kontakt/" class="btn btn-primary">Zapytaj o usługi programistyczne</a>
     </div>
     <div class="col-lg-6">
       <div class="card h-100">
-        <div class="card-body text-center">
-          <h5 class="card-title">Nasze technologie</h5>
+        <div class="card-body">
+          <h5 class="card-title">Nasze usługi programistyczne</h5>
+          <ul class="mb-4">
+            <li>Tworzenie stron internetowych</li>
+            <li>Aplikacje webowe</li>
+            <li>Systemy CMS</li>
+            <li>Konsultacje techniczne</li>
+          </ul>
+          
+          <h5 class="card-title mt-4">Nasze technologie</h5>
           <p class="card-text">Pracujemy z nowoczesnymi technologiami, takimi jak HTML5, CSS3, JavaScript, React, Node.js, oraz generatorami stron statycznych jak Eleventy.</p>
         </div>
       </div>
     </div>
   </div>
 </div> 
+        </div>
     </main>
     
     <footer class="bg-light py-4 mt-5">
