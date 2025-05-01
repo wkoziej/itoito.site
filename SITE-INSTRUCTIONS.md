@@ -143,7 +143,7 @@ itoito.website/
      "description": "Alternatywy się uzupełniają",
      "url": "https://www.itoito.website",
      "author": "Wojciech Koziej",
-     "email": "wkoziej@gmail.com",
+     "email": "...",
      "phone": "+48 ...",
      "address": "Bogucin",
      "facebook": "https://facebook.com/itoito"
