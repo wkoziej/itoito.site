@@ -17,7 +17,7 @@ Eleventy (11ty) to prosty generator stron statycznych, który doskonale nadaje s
 Rekomendowana struktura projektu:
 
 ```
-itoito.website/
+itoito.site/
 ├── .eleventy.js                # Plik konfiguracyjny Eleventy
 ├── package.json                # Zależności npm
 ├── README.md                   # Dokumentacja
@@ -141,7 +141,7 @@ itoito.website/
    {
      "name": "I to i to",
      "description": "Alternatywy się uzupełniają",
-     "url": "https://www.itoito.website",
+     "url": "https://www.itoito.site",
      "author": "Wojciech Koziej",
      "email": "...",
      "phone": "+48 ...",
@@ -263,7 +263,7 @@ itoito.website/
 2. **Publikacja na GitHub**:
    
    - Utwórz nowe repozytorium na GitHub
-   - Podłącz lokalne repozytorium: `git remote add origin https://github.com/wkoziej/itoito.website.git`
+   - Podłącz lokalne repozytorium: `git remote add origin https://github.com/wkoziej/itoito.site.git`
    - Wypchnij zmiany: `git push -u origin main`
 
 3. **Wdrażanie na serwer**:
