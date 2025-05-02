@@ -21,27 +21,36 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
           
-      - name: Clear npm cache
-        run: npm cache clean --force
-        
-      - name: Install dependencies
-        id: install
+      - name: Clean and prepare npm
         run: |
+          npm cache clean --force
           npm config set fetch-retry-maxtimeout 600000
-          npm ci --prefer-offline --no-audit
-        continue-on-error: true
-        
-      - name: Retry Install dependencies (if failed)
-        run: npm install --no-audit
-        if: steps.install.outcome == 'failure'
-        
-      - name: Build site
+          npm config set fetch-retries 5
+          npm config set strict-ssl false
+          npm config set legacy-peer-deps true
+          
+      - name: Force manual download of problematic package
+        run: |
+          mkdir -p node_modules/utils-merge
+          curl -L https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz -o utils-merge-1.0.1.tgz
+          tar -xzf utils-merge-1.0.1.tgz -C node_modules/utils-merge --strip-components=1
+          
+      - name: Install dependencies with force option
+        run: npm install --no-audit --no-fund --force
+          
+      - name: Build
         run: npm run build
-        
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+          
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist 
+          path: 'dist'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1 
